@@ -37,8 +37,8 @@ class App extends React.Component {
 
       //this pulls the data from the API we created on like 33
       this.setState({ 
-
-        temperature: data.main.temp,
+        //rounds up the temp if it is a descimal value
+        temperature: Math.round(data.main.temp),
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
