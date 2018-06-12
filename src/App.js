@@ -14,6 +14,7 @@ class App extends React.Component {
     country: undefined,
     humidity: undefined,
     description: undefined,
+    weatherfont: undefined,
     error: undefined
 
   }
@@ -43,6 +44,7 @@ class App extends React.Component {
         country: data.sys.country,
         humidity: data.main.humidity,
         description: data.weather[0].description,
+        weatherfont: data.cod,
         error: ""
 
       });
@@ -83,6 +85,7 @@ class App extends React.Component {
                     country={this.state.country}
                     humidity={this.state.humidity}
                     description={this.state.description}
+                    weatherfont={this.state.weatherfont}
                     error={this.state.error}
 
                     />

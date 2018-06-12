@@ -23,6 +23,11 @@ const Weather = (props) => {
 					<span className = "weather__value"> {props.description}</span>
 				</p>
 			}
+			{
+				props.weatherfont && <p className = "weather__key">
+					<span className = "weather__value"><i className="fas fa-cloud"></i>{props.weatherfont}</span>
+				</p>
+			}
 			{ 
 				props.error && <p className = "weather__key">{props.error}</p>
 			}	
