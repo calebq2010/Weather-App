@@ -3,8 +3,8 @@ import React from "react";
 const Form = (props) => {
 	return (
 		<form onSubmit={props.getWeather}>
-			<input type="text" name="city" placeholder="City..." placeholderTextColor="white" />
-			<input type="text" name="country" placeholder="Country..." placeholderTextColor="white" />
+			<input type="text" name="city" placeholder="City..." placeholdertextcolor="white" />
+			<input type="text" name="country" placeholder="Country..." placeholdertextcolor="white" />
 			<button>Get Weather</button>
 		</form>
 	);

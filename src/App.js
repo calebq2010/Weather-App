@@ -28,7 +28,7 @@ class App extends React.Component {
     const country = e.target.elements.country.value;
 
     //async call using the javascript fetch api to reach out and pull the data
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}`);
+    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&APPID=${API_KEY}`);
     //converting to JSON format and assigning it to data variable 
     const data = await api_call.json(); 
     // checks to make sure users enters valid city and country values and if not will alert them to do so
@@ -73,7 +73,7 @@ class App extends React.Component {
                 <div className="col-xs-5 title-container">
                   <Titles />
                 </div>
-                <div class="col-xs-7 form-container">
+                <div className="col-xs-7 form-container">
                    <Form getWeather={this.getWeather} />
 
                     <Weather 
