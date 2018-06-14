@@ -125,3 +125,14 @@ button:active {
   letter-spacing: 1px;
   font-weight: 200;
 }
+
+.fa-cloud {
+  font-size: 100px;
+  color: #f16051;
+}
+
+/* this is to change the color/size of the font awesome */
+.bigfont .fa-sun {
+  font-size: 100px;
+  color: #f16051;
+}

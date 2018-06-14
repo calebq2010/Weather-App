@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Weather = (props) => {
 	return (
 		<div className = "weather__info">
@@ -24,8 +25,23 @@ const Weather = (props) => {
 				</p>
 			}
 			{
-				props.weatherfont && <p className = "weather__key">
-					<span className = "weather__value"><i className="fas fa-cloud"></i>{props.weatherfont}</span>
+				props.description === "clear sky" && <p className = "weather__key bigfont">
+					<span className = "weather__value"><i className="fas fa-sun "></i></span>
+				</p>
+			}
+			{
+				props.description === "scattered clouds" && <p className = "weather__key bigfont">
+					<span className = "weather__value"><i className="fas fa-cloud"></i></span>
+				</p>
+			}
+			{
+				props.description === "broken clouds" && <p className = "weather__key bigfont">
+					<span className = "weather__value"><i className="fas fa-cloud"></i></span>
+				</p>
+			}
+			{
+				props.description === "thunderstorm" && <p className = "weather__key bigfont">
+					<span className = "weather__value"><i className="fas fa-tint"></i></span>
 				</p>
 			}
 			{ 
