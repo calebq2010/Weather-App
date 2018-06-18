@@ -4,21 +4,31 @@ import React from "react";
 const Weather = (props) => {
 	let icon;
 
-	switch(props.description){
-		case 'clear sky':
-			icon = 'fas fa-sun';
-		
-		case 'scattered clouds':
-			icon = 'fas fa-cloud'
-			
-		case 'broken clouds':
-			icon = 'fas fa-cloud';
-	
-		case 'thunderstorm':
-			icon = 'fas fa-tint';
+//	switch(props.description){
+//		case 'clear sky':
+//			icon = 'fas fa-sun';
+//			/* falls through */
+//		case 'scattered clouds':
+//			icon = 'fas fa-cloud'
+//			/* falls through */
+//		case 'broken clouds':
+//			icon = 'fas fa-cloud';
+//			/* falls through */
+//		case 'thunderstorm':
+//			icon = 'fas fa-tint';
+//			/* falls through */
+//	}
 
+	if(props.description == "clear sky"){
+		icon = 'fas fa-sun';
+	}else if(props.description == "scattered clouds"){
+		icon = 'fas fa-cloud';
+	}else if(props.description == "broken clouds"){
+		icon = 'fas fa-cloud'
+	}else if(props.description == "thunderstorm"){
+		icon = 'fas fa-tint';
 	}
-	console.log('props', props);
+
 	if(props.completed)
 		return (
 			<div className="weather__info">
