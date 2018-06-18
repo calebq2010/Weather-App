@@ -27,6 +27,16 @@ const Weather = (props) => {
 		icon = 'fas fa-cloud'
 	}else if(props.description == "thunderstorm"){
 		icon = 'fas fa-tint';
+	}else if(props.description == "few clouds"){
+		icon = 'fas fa-cloud';
+	}else if(props.description == "shower rain"){
+		icon = 'fas fa-tint';
+	}else if(props.description == "rain"){
+		icon = 'fas fa-tint';
+	}else if(props.description == "snow"){
+		icon = 'fas fa-snowflake';
+	}else if(props.description == "mist"){
+		icon = 'fas fa-snowflake';
 	}
 
 	if(props.completed)
