@@ -7,11 +7,16 @@ const Weather = (props) => {
 	switch(props.description){
 		case 'clear sky':
 			icon = 'fas fa-sun';
+		
 		case 'scattered clouds':
+			icon = 'fas fa-cloud'
+			
 		case 'broken clouds':
 			icon = 'fas fa-cloud';
+	
 		case 'thunderstorm':
 			icon = 'fas fa-tint';
+
 	}
 	console.log('props', props);
 	if(props.completed)
