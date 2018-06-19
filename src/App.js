@@ -61,7 +61,7 @@ class App extends React.Component {
         humidity: undefined,
         description: undefined,
         error: "Please enter the values!",
-        completed: true
+        completed: false
       });
 
     }

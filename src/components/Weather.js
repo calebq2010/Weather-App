@@ -39,7 +39,7 @@ const Weather = (props) => {
 		icon = 'fas fa-snowflake';
 	}
 
-	if(props.completed)
+	if(props.completed === true)
 		return (
 			<div className="weather__info">
 
@@ -58,12 +58,18 @@ const Weather = (props) => {
 					
 				<p className="weather__key bigfont">
 					<span className="weather__value"><i className={icon}></i></span>
-				</p>
+				</p>	
+			</div> 	
+		);
+
+	if(props.completed === false)
+		return (
+			<div className = "weather__info">
 				{ 
 					props.error && <p className="weather__key">{props.error}</p>
 				}	
-			</div> 	
-		);
+			</div>
+	);
 
 	return (<div></div>)
 }
